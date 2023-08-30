@@ -16,7 +16,6 @@ public:
     friend Tranzactii creareTranzactie(std::string desc, int val);
 
     [[maybe_unused]] std::string getDesc();
-
     [[maybe_unused]] int getValoare();
 };
 
