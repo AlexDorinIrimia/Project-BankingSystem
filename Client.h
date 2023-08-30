@@ -24,6 +24,11 @@ public:
     [[maybe_unused]] std :: string getAdresa();
     [[maybe_unused]] std :: string getNumarDeTelefon();
     [[maybe_unused]] std :: string getParola();
+    void setCnp(std::string cnp);
+    void setNume(std::string nume);
+    void setAdresa(std::string adresa);
+    void setNumarDeTelefon(std::string numarDeTelefon);
+    void setParola(std::string parola);
 };
 
 
