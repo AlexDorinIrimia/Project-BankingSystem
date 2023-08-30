@@ -25,3 +25,8 @@ Client::Client(std::string cnp, std::string name, std::string adress, std::strin
 [[maybe_unused]]std::string Client::getAdresa() {return this->adresa;}
 [[maybe_unused]]std::string Client::getNumarDeTelefon() {return this->numarDeTelefon;}
 [[maybe_unused]]std::string Client::getParola() {return this->parola;}
+void Client::setCnp(std::string cnp) {this->CNP = cnp;}
+void Client::setNume(std::string nume) {this->nume = nume;}
+void Client::setAdresa(std::string adresa) {this->adresa = adresa;}
+void Client::setNumarDeTelefon(std::string numarDeTelefon) {this->numarDeTelefon = numarDeTelefon;}
+void Client::setParola(std::string parola) {this->parola = parola;}
