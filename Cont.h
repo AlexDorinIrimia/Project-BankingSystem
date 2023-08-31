@@ -2,8 +2,8 @@
 // Created by alex on 30.08.2023.
 //
 
-#ifndef PROIECT__SISTEMBANCAR_CONT_H
-#define PROIECT__SISTEMBANCAR_CONT_H
+#ifndef PROIECT_SISTEMBANCAR_CONT_H
+#define PROIECT_SISTEMBANCAR_CONT_H
 
 #include <string>
 
@@ -12,9 +12,9 @@ private:
     std::string numarCont;
     std :: string clientCNP;
     int sold;
-    Cont(std::string cl);
 public:
-    inline Cont creareCont(std::string  cl);
+    Cont(std::string cl);
+    Cont creareCont(std::string  cl);
     [[maybe_unused]] std :: string getNumarCont();
     [[maybe_unused]] std::string getClient();
     [[maybe_unused]] int getSold();
@@ -23,4 +23,4 @@ public:
     void setSold(int sold);
 };
 
-#endif //PROIECT__SISTEMBANCAR_CONT_H
+#endif //PROIECT_SISTEMBANCAR_CONT_H
