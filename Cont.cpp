@@ -4,14 +4,14 @@
 
 #include "Cont.h"
 
-Cont::Cont(std::string numCon, std::string cl) {
-    this->numarCont=numCon;
+Cont::Cont(std::string cl) {
     this->clientCNP = cl;
     this->sold = 0;
 }
 
-Cont creareCont(std::string numCon, std::string  cl){
-    Cont cnt = Cont(numCon,cl);
+Cont creareCont(std::string  cl){
+    Cont cnt = Cont(cl);
+    cnt.numarCont = "Con" + std::to_string(rand());
     return cnt;
 }
 
