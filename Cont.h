@@ -12,9 +12,9 @@ private:
     std::string numarCont;
     std :: string clientCNP;
     int sold;
-    Cont(std::string numCon, std::string cl);
+    Cont(std::string cl);
 public:
-    friend Cont creareCont(std::string numCon, std::string  cl);
+    friend Cont creareCont(std::string  cl);
     [[maybe_unused]] std :: string getNumarCont();
     [[maybe_unused]] std::string getClient();
     [[maybe_unused]] int getSold();
