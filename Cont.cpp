@@ -5,13 +5,13 @@
 #include "Cont.h"
 
 Cont::Cont(std::string cl) {
+    this->numarCont = "Con" + std::to_string(rand());
     this->clientCNP = cl;
     this->sold = 0;
 }
 
-inline Cont Cont::creareCont(std::string cl){
+Cont Cont::creareCont(std::string cl){
     Cont cnt = Cont(cl);
-    cnt.numarCont = "Con" + std::to_string(rand());
     return cnt;
 }
 
