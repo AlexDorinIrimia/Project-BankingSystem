@@ -14,10 +14,10 @@ private:
     std :: string adresa;
     std :: string numarDeTelefon;
     std :: string parola;
-    Client(std :: string CNP,  std :: string nume,  std :: string adresa,  std :: string numarDeTelefon,  std :: string parola);
 
 public:
-    friend Client creareClient(std :: string CNP,  std :: string nume,  std :: string adresa,  std :: string numarDeTelefon,  std :: string parola);
+    Client(std :: string CNP,  std :: string nume,  std :: string adresa,  std :: string numarDeTelefon,  std :: string parola);
+    Client creareClient(std :: string CNP,  std :: string nume,  std :: string adresa,  std :: string numarDeTelefon,  std :: string parola);
 
     [[maybe_unused]] std :: string getCNP();
     [[maybe_unused]] std :: string getNume();
