@@ -9,7 +9,7 @@ Cont::Cont(std::string cl) {
     this->sold = 0;
 }
 
-Cont creareCont(std::string  cl){
+inline Cont Cont::creareCont(std::string cl){
     Cont cnt = Cont(cl);
     cnt.numarCont = "Con" + std::to_string(rand());
     return cnt;
