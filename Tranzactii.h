@@ -13,16 +13,15 @@ private:
     std::string ID;
     int valoare;
     std::string descriere;
-    Tranzactii(std::string desc, int val);
 public:
-    friend Tranzactii creareTranzactie(std::string desc, int val);
-
+    Tranzactii creareTranzactie(std::string desc, int val);
+    Tranzactii(std::string desc, int val);
     [[maybe_unused]] std::string getDesc();
     [[maybe_unused]] int getValoare();
     [[maybe_unused]]std::string getID();
-    [[maybe_unused]]void depunere(int val,Cont cnt);
-    [[maybe_unused]]void transfer(Cont cont1, Cont cont2, int suma);
-    [[maybe_unused]]void retragere(int val,Cont cnt);
+    [[maybe_unused]]void depunere(int val,Cont *cnt);
+    [[maybe_unused]]void transfer(Cont *cont1, Cont *cont2, int suma);
+    [[maybe_unused]]void retragere(int val,Cont* cnt);
     [[maybe_unused]]void vizualizareDetalii();
 };
 
