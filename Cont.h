@@ -23,5 +23,4 @@ public:
     void setSold(int sold);
 };
 
-
 #endif //PROIECT__SISTEMBANCAR_CONT_H
