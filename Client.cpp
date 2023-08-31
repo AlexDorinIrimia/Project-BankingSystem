@@ -14,7 +14,7 @@ Client::Client(std::string cnp, std::string name, std::string adress, std::strin
     this->parola = std::move(pass);
 }
 
-[[maybe_unused]] Client creareClient(std :: string cnp,  std :: string name,  std :: string adress,  std :: string numardetelefon,  std :: string pass)
+[[maybe_unused]] Client Client::creareClient(std :: string cnp,  std :: string name,  std :: string adress,  std :: string numardetelefon,  std :: string pass)
 {
     Client client = Client(cnp,name,adress,numardetelefon,pass);
     return client;
