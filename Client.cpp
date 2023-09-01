@@ -30,3 +30,5 @@ void Client::setNume(std::string nume) {this->nume = nume;}
 void Client::setAdresa(std::string adresa) {this->adresa = adresa;}
 void Client::setNumarDeTelefon(std::string numarDeTelefon) {this->numarDeTelefon = numarDeTelefon;}
 void Client::setParola(std::string parola) {this->parola = parola;}
+
+Client::Client() {}
