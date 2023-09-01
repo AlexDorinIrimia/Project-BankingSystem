@@ -29,6 +29,8 @@ public:
     void setAdresa(std::string adresa);
     void setNumarDeTelefon(std::string numarDeTelefon);
     void setParola(std::string parola);
+
+    Client();
 };
 
 
