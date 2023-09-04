@@ -5,21 +5,35 @@
 # include <iostream>
 # include "Client.h"
 # include <string>
-//# include "Cont.h"
-//# include "Tranzactii.h"
+#include <sqlite3.h>
+# include "Cont.h"
+# include "Tranzactii.h"
+# include "Utilities.h"
 
 using namespace std;
 
 # define MAX 100
 
 int option;
-string nume, cnp, adresa,numardetelefon,parola;
-Client clienti[MAX];
-int size;
+string nume, cnp, adresa,numardetelefon,parola,user,pass;
+int ok;
+
+/*Client clienti[MAX];
+Cont cont[MAX];
+int size;*/
 
 int main()
 {
-    int ok = 1;
+    sqlite3 *DATA;
+    int num = sqlite3_open("Tabele.sql",&DATA);
+    if(num)
+    {
+        std::cout<<"Eroare!"<<endl;
+        return -1;
+    }
+    else
+        cout << "Conectat!";
+
     while(ok) {
     cout << "Alege optiune:\n 1.Inregistrare client\n 2.Conectare client\n"<<endl;
 
@@ -37,11 +51,20 @@ int main()
                 cout << "Parola:\n";
                 cin >> parola;
 
-                Client cl = cl.Client::creareClient(cnp, nume, adresa, numardetelefon, parola);
-                clienti[size++] = cl;
+                //Client cl = cl.Client::creareClient(cnp, nume, adresa, numardetelefon, parola);
+                //clienti[size++] = cl;
                 break;
             }
             case 2: {
+/*
+                if(LogIn(user,pass))
+                {
+                    cout <<"Conectare reusita!"<<endl;
+                    //for(int i:)
+                    //vizualizareDetalii();
+                    cout <<""<<endl;
+                }
+*/
                 break;
             }
 
@@ -53,5 +76,6 @@ int main()
         if(option != 1 && option != 2)
             ok = 0;
     }
+    sqlite3_close(DATA);
     return 0;
 }
