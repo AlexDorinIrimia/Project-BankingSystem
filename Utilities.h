@@ -6,9 +6,10 @@
 #define PROIECT_SISTEMBANCAR_UTILITIES_H
 
 # include "Cont.h"
+# include "Client.h"
 
 void vizualizareDetalii(Cont cnt);
-bool LogIn();
+bool LogIn(std::string numeClient, std::string pass);
 std::string inputPass();
 
 #endif //PROIECT_SISTEMBANCAR_UTILITIES_H
