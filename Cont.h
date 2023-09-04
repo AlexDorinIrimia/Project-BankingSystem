@@ -21,6 +21,8 @@ public:
     void setNumarCont(std::string numarCont);
     void setClientCnp(std::string clientCnp);
     void setSold(int sold);
+
+    Cont();
 };
 
 #endif //PROIECT_SISTEMBANCAR_CONT_H
