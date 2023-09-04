@@ -24,3 +24,5 @@ std::string Cont::getNumarCont() {return this->numarCont;}
 void Cont::setNumarCont(std::string numarCont) {this->numarCont = numarCont;}
 void Cont::setClientCnp(std::string clientCnp) {this->clientCNP = clientCnp;}
 void Cont::setSold(int sold) {this->sold = sold;}
+
+Cont::Cont() {}
