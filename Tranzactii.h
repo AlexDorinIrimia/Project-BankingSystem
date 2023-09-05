@@ -22,7 +22,6 @@ public:
     [[maybe_unused]]void depunere(int val,Cont *cnt);
     [[maybe_unused]]void transfer(Cont *cont1, Cont *cont2, int suma);
     [[maybe_unused]]void retragere(int val,Cont* cnt);
-    [[maybe_unused]]void vizualizareDetalii();
 };
 
 
