@@ -5,13 +5,14 @@
 #include "Tranzactii.h"
 # include "Cont.h"
 
-Tranzactii::Tranzactii(std::string desc, int val) {
+Tranzactii::Tranzactii(std::string desc, int val, std::string nrCont) {
     this->descriere = desc;
     this->valoare = val;
+    this->nrCont = nrCont;
 }
 
-Tranzactii Tranzactii::creareTranzactie(std::string desc, int val){
-    Tranzactii tr = Tranzactii(desc,val);
+Tranzactii Tranzactii::creareTranzactie(std::string desc, int val, std::string nrCont){
+    Tranzactii tr = Tranzactii(desc,val,nrCont);
     tr.ID = "Tr" + std::to_string(rand());
     return tr;
 }
