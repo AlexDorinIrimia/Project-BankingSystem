@@ -29,3 +29,11 @@ Tranzactii Tranzactii::creareTranzactie(std::string desc, int val){
     retragere(suma,cont1);
     depunere(suma,cont2);
 }
+
+const std::string &Tranzactii::getNrCont() const {
+    return nrCont;
+}
+
+void Tranzactii::setNrCont(const std::string &nrCont) {
+    Tranzactii::nrCont = nrCont;
+}
