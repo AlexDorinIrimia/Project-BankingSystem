@@ -15,8 +15,8 @@ private:
     int valoare;
     std::string descriere;
 public:
-    Tranzactii creareTranzactie(std::string desc, int val);
-    Tranzactii(std::string desc, int val);
+    Tranzactii creareTranzactie(std::string desc, int val, std::string nrCont) ;
+    Tranzactii(std::string desc, int val, std::string nrCont);
     [[maybe_unused]] std::string getDesc();
     [[maybe_unused]] int getValoare();
     [[maybe_unused]]std::string getID();
