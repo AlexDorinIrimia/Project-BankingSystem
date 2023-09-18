@@ -6,26 +6,23 @@
 
 #include <utility>
 
-Client::Client(std::string cnp, std::string name, std::string adress, std::string numardetelefon) {
-    this->CNP = std::move(cnp);
-    this->nume = std::move(name);
-    this->adresa = std::move(adress);
-    this->numarDeTelefon = std::move(numardetelefon);
-}
-
-[[maybe_unused]] Client Client::creareClient(std :: string cnp,  std :: string name,  std :: string adress,  std :: string numardetelefon)
-{
-    Client client = Client(cnp,name,adress,numardetelefon);
-    return client;
+Client::Client(std::string cnp, std::string name, std::string adress, std::string numardetelefon,std::string pass) {
+    Client::CNP = std::move(cnp);
+    Client::nume = std::move(name);
+    Client::adresa = std::move(adress);
+    Client::numarDeTelefon = std::move(numardetelefon);
+    Client::parola = std::move(pass);
 }
 
 [[maybe_unused]]std::string Client::getCNP() {return this->CNP;}
 [[maybe_unused]]std::string Client::getNume() {return this->nume;}
 [[maybe_unused]]std::string Client::getAdresa() {return this->adresa;}
 [[maybe_unused]]std::string Client::getNumarDeTelefon() {return this->numarDeTelefon;}
+[[maybe_unused]]std::string Client::getParola() {return this->parola;}
 void Client::setCnp(std::string cnp) {this->CNP = cnp;}
-void Client::setNume(std::string nume) {this->nume = nume;}
-void Client::setAdresa(std::string adresa) {this->adresa = adresa;}
-void Client::setNumarDeTelefon(std::string numarDeTelefon) {this->numarDeTelefon = numarDeTelefon;}
+void Client::setNume(std::string num) {this->nume = num;}
+void Client::setAdresa(std::string adr) {this->adresa = adr;}
+void Client::setNumarDeTelefon(std::string numardeTelefon) {this->numarDeTelefon = numardeTelefon;}
+void Client::setParola(std::string pass) {this->parola = pass;}
 
 Client::Client() {}
