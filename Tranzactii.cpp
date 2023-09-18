@@ -1,25 +1,22 @@
 //
 // Created by alex on 30.08.2023.
 //
-
 #include "Tranzactii.h"
 # include "Cont.h"
+# include <cstdlib>
+# include <time.h>
 
-Tranzactii::Tranzactii(std::string desc, int val, std::string nrCont) {
-    this->descriere = desc;
-    this->valoare = val;
-    this->nrCont = nrCont;
+Tranzactii::Tranzactii(std::string nrCont,int val,std::string desc) {
+    srand(time(0));
+    Tranzactii::ID = "Tr" + std::to_string(rand());
+    Tranzactii::nrCont = nrCont;
+    Tranzactii::valoare = val;
+    Tranzactii::desc = desc;
 }
 
-Tranzactii Tranzactii::creareTranzactie(std::string desc, int val, std::string nrCont){
-    Tranzactii tr = Tranzactii(desc,val,nrCont);
-    tr.ID = "Tr" + std::to_string(rand());
-    return tr;
-}
-
-[[maybe_unused]] std::string Tranzactii::getDesc() {return this->descriere;}
 [[maybe_unused]] int Tranzactii::getValoare() {return this->valoare;}
 [[maybe_unused]] std::string Tranzactii::getID() {return this->ID;}
+[[maybe_unused]] std::string Tranzactii::getDescriere() {return this->desc;}
 [[maybe_unused]]void Tranzactii::depunere(int val, Cont *cnt){
     cnt->setSold(cnt->getSold() + val);
 }
@@ -31,10 +28,11 @@ Tranzactii Tranzactii::creareTranzactie(std::string desc, int val, std::string n
     depunere(suma,cont2);
 }
 
-const std::string &Tranzactii::getNrCont() const {
-    return nrCont;
+std::string Tranzactii::getNrCont(){
+    return this->nrCont;
 }
 
-void Tranzactii::setNrCont(const std::string &nrCont) {
-    Tranzactii::nrCont = nrCont;
+Tranzactii::Tranzactii() {
+
 }
+
