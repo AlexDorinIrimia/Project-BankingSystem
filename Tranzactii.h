@@ -13,19 +13,21 @@ private:
     std::string ID;
     std::string nrCont;
     int valoare;
-    std::string descriere;
+    std::string desc;
+
 public:
-    Tranzactii creareTranzactie(std::string desc, int val, std::string nrCont) ;
-    Tranzactii(std::string desc, int val, std::string nrCont);
-    [[maybe_unused]] std::string getDesc();
+    Tranzactii(std::string nrCont,int val,std::string desc);
+
     [[maybe_unused]] int getValoare();
     [[maybe_unused]]std::string getID();
-    const std::string &getNrCont() const;
+    [[maybe_unused]]std::string getDescriere();
+    std::string getNrCont();
 
-    void setNrCont(const std::string &nrCont);
     [[maybe_unused]]void depunere(int val,Cont *cnt);
     [[maybe_unused]]void transfer(Cont *cont1, Cont *cont2, int suma);
     [[maybe_unused]]void retragere(int val,Cont* cnt);
+
+    Tranzactii();
 };
 
 
