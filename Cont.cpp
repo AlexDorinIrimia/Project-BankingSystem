@@ -1,28 +1,24 @@
 //
 // Created by alex on 30.08.2023.
 //
+# include "Cont.h"
+# include <cstdlib>
+# include <time.h>
 
-#include "Cont.h"
 
 Cont::Cont(std::string cl) {
-    this->numarCont = "Con" + std::to_string(rand());
-    this->clientCNP = cl;
-    this->sold = 0;
+    srand(time(0));
+    Cont::numarCont = "Con" + std::to_string(rand());
+    Cont::clientCNP = cl;
+    Cont::sold = 0;
 }
-
-Cont Cont::creareCont(std::string cl){
-    Cont cnt = Cont(cl);
-    return cnt;
-}
-
-
 
 
 std::string Cont::getClient() {return this->clientCNP;}
 int Cont:: getSold() {return this->sold;}
 std::string Cont::getNumarCont() {return this->numarCont;}
-void Cont::setNumarCont(std::string numarCont) {this->numarCont = numarCont;}
-void Cont::setClientCnp(std::string clientCnp) {this->clientCNP = clientCnp;}
-void Cont::setSold(int sold) {this->sold = sold;}
+void Cont::setNumarCont(std::string numarcont) {this->numarCont = numarcont;}
+void Cont::setClientCnp(std::string clientcnp) {this->clientCNP = clientcnp;}
+void Cont::setSold(int sol) {this->sold = sol;}
 
 Cont::Cont() {}
