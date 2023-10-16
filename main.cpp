@@ -13,26 +13,26 @@ using namespace std;
 int main()
 {
     string parola;
-    int option;
+    string option;
     string nume, cnp, adresa,numardetelefon;
     Client cl;
     Cont cont;
     while (1) {
         cout << "Alege optiune:\n 1.Inregistrare client\n 2.Conectare client\n 3.Iesire\n" << endl;
 
-        cin >> option;
-        switch (option) {
+        getline(cin,option);
+        switch (stoi(option)) {
             case 1: {
                 cout << "CNP:\n";
-                cin >> cnp;
+                getline(cin,cnp);
                 cout << "Nume:\n";
                 getline(cin,nume);
                 cout << "Adresa:\n";
                 getline(cin,adresa);
                 cout << "Numar de telefon:\n";
-                cin >> numardetelefon;
+                getline(cin,numardetelefon);
                 cout << "Parola: \n";
-                cin >> parola;
+                getline(cin,parola);
                 cl = Client(cnp,nume,adresa,numardetelefon,parola);
                 inserareClient(cl);
 
@@ -60,7 +60,7 @@ int main()
                 continue;
             }
         }
-        if (option == 3)
+        if (option == "3")
             break;
     }
     return 0;
