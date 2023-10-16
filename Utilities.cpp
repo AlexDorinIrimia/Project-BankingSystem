@@ -58,9 +58,9 @@ void vizualizareDetalii(Cont cnt) {
 bool LogIn(Client *client1) {
     std::string username, password;
     std::cout << "Utilizator:";
-    std::cin >> username;
+    getline(std::cin,username);
     std::cout << "Parola:";
-    std::cin >> password;
+    getline(std::cin,password);
     str1 = selectStr(username, password);
     sqlite3_open("SistemBancar.db", &data1);
     int r;
