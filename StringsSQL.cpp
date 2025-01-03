@@ -3,9 +3,10 @@
 //
 
 #include <string>
-#include "Cont.h"
-#include "Tranzactii.h"
-#include "Client.h"
+#include "Account.hpp"
+#include "Transactions.hpp"
+#include "Client.hpp"
+#include "StringsSQL.hpp"
 
 std::string selectStr(std::string user, std::string pass)
 {

@@ -1,8 +1,8 @@
 //
 // Created by alex on 30.08.2023.
 //
-#ifndef PROIECT_SISTEMBANCAR_CONT_H
-#define PROIECT_SISTEMBANCAR_CONT_H
+#ifndef PROJECT_BANKINGSYSTEM_ACCOUNT_HPP
+#define PROJECT_BANKINGSYSTEM_ACCOUNT_HPP
 
 #include <string>
 

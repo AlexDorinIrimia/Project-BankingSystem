@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS Clients(
+    CNP VARCHAR(10) PRIMARY KEY NOT NULL,
+    Name VARCHAR(20) NOT NULL,
+    Address VARCHAR(30) NOT NULL,
+    'Phone number' VARCHAR(12) NOT NULL,
+    Password VARCHAR(16) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Accounts(
+    'Account number' VARCHAR(20) PRIMARY KEY NOT NULL,
+    CNP VARCHAR(10) NOT NULL,
+    Sold REAL,
+    FOREIGN KEY(CNP) REFERENCES Clients(CNP)
+);
+
+CREATE TABLE IF NOT EXISTS Transactions(
+    ID VARCHAR(20) PRIMARY KEY NOT NULL,
+    'Account number' VARCHAR(20) NOT NULL,
+    Sold REAL,
+    Description VARCHAR(60),
+    FOREIGN KEY('Account number') REFERENCES Accounts('Account number')
+);

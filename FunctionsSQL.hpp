@@ -2,12 +2,12 @@
 // Created by alex on 15.09.2023.
 //
 
-#ifndef PROIECT_SISTEMBANCAR_FUNCTIONSSQL_H
-#define PROIECT_SISTEMBANCAR_FUNCTIONSSQL_H
+#ifndef PROJECT_BANKINGSYSTEM__FUNCTIONSSQL_HPP
+#define PROJECT_BANKINGSYSTEM__FUNCTIONSSQL_HPP
 
 #include <string>
-#include "Tranzactii.h"
-#include "Client.h"
+#include "Transactions.hpp"
+#include "Client.hpp"
 
 void inserareClient(Client cl);
 void insertTR(Tranzactii tr);

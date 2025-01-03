@@ -1,10 +1,10 @@
 //
 // Created by alex on 01.09.2023.
 //
-# include "Utilities.h"
-# include "Client.h"
-# include "StringsSQL.h"
-# include "FunctionsSQL.h"
+# include "Utilities.hpp"
+# include "Client.hpp"
+# include "StringsSQL.hpp"
+# include "FunctionsSQL.hpp"
 # include <string>
 # include <sqlite3.h>
 # include <iostream>
@@ -62,7 +62,7 @@ bool LogIn(Client *client1) {
     std::cout << "Parola:";
     getline(std::cin,password);
     str1 = selectStr(username, password);
-    sqlite3_open("SistemBancar.db", &data1);
+    sqlite3_open("BankingSystem.db", &data1);
     int r;
     r = sqlite3_exec(data1, str1.c_str(),callback,client1, nullptr);
     if (r == 0) {
@@ -83,7 +83,7 @@ bool cautareCont(Client cl,Cont *cnt)
 {
     std::string op;
     str1 = selectStrC(cl.getCNP());
-    sqlite3_open("SistemBancar.db", &data1);
+    sqlite3_open("BankingSystem.db", &data1);
     int r;
     r = sqlite3_exec(data1, str1.c_str(),callback1, cnt, nullptr);
     if (r == 0) {
@@ -114,7 +114,7 @@ Cont cautareCont1(std::string nume,Cont *cnt)
 {
     Client *client;
     str1 = cautareNume(nume);
-    sqlite3_open("SistemBancar.db", &data1);
+    sqlite3_open("BankingSystem.db", &data1);
     int r;
     r = sqlite3_exec(data1, str1.c_str(),callback,client, nullptr);
     if(r != 0) {

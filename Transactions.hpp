@@ -2,11 +2,11 @@
 // Created by alex on 30.08.2023.
 //
 
-#ifndef PROIECT_SISTEMBANCAR_TRANZACTII_H
-#define PROIECT_SISTEMBANCAR_TRANZACTII_H
+#ifndef PROJECT_BANKINGSYSTEM_TRANSACTION_HPP
+#define PROJECT_BANKINGSYSTEM_TRANSACTION_HPP
 
 # include <string>
-# include "Cont.h"
+# include "Account.hpp"
 
 class Tranzactii{
 private:

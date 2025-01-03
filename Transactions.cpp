@@ -1,8 +1,8 @@
 //
 // Created by alex on 30.08.2023.
 //
-#include "Tranzactii.h"
-# include "Cont.h"
+#include "Transactions.hpp"
+# include "Account.hpp"
 # include <cstdlib>
 # include <time.h>
 

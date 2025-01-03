@@ -2,11 +2,11 @@
 // Created by alex on 31.08.2023.
 //
 # include <iostream>
-# include "Client.h"
+# include "Client.hpp"
 # include <string>
-# include "Cont.h"
-# include "Utilities.h"
-#include "FunctionsSQL.h"
+# include "Account.hpp"
+# include "Utilities.hpp"
+#include "FunctionsSQL.hpp"
 
 using namespace std;
 

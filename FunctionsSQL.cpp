@@ -2,11 +2,11 @@
 // Created by alex on 15.09.2023.
 //
 
-# include "FunctionsSQL.h"
-#include "Cont.h"
-#include "Tranzactii.h"
-#include "StringsSQL.h"
-#include "Client.h"
+# include "FunctionsSQL.hpp"
+#include "Account.hpp"
+#include "Transactions.hpp"
+#include "StringsSQL.hpp"
+#include "Client.hpp"
 # include <string>
 # include <sqlite3.h>
 # include <iostream>
@@ -17,7 +17,7 @@ sqlite3 *data;
 
 void inserareClient(Client cl)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = insertStr(cl);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -29,7 +29,7 @@ void inserareClient(Client cl)
 
 void insertTR(Tranzactii tr)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = insertStrT(tr);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -41,7 +41,7 @@ void insertTR(Tranzactii tr)
 
 void insertC(Cont cnt)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = insertStrC(cnt);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -52,7 +52,7 @@ void insertC(Cont cnt)
 }
 
 void updatetbldep(Tranzactii tr) {
-    sqlite3_open("SistemBancar.db", &data);
+    sqlite3_open("BankingSystem.db", &data);
     str = altertblCdep(tr);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -63,7 +63,7 @@ void updatetbldep(Tranzactii tr) {
 }
 void updatetblret(Tranzactii tr)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = altertblCret(tr);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -93,7 +93,7 @@ static int callback(void *client, int count,char **date, char **column)
 
 void getClient(std::string cnp, Client *c)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = cautareNume1(cnp);
     int r = sqlite3_exec(data, str.c_str(), callback, c, nullptr);
     if(r == 0)
@@ -108,7 +108,7 @@ void getClient(std::string cnp, Client *c)
 
 void updatetblclad(Client cl)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = altertblClad(cl);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -120,7 +120,7 @@ void updatetblclad(Client cl)
 
 void updatetblclnr(Client cl)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = altertblClnr(cl);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)
@@ -132,7 +132,7 @@ void updatetblclnr(Client cl)
 
 void updatetblclpass(Client cl)
 {
-    sqlite3_open("SistemBancar.db",&data);
+    sqlite3_open("BankingSystem.db",&data);
     str = altertblClpass(cl);
     int r = sqlite3_exec(data, str.c_str(), nullptr, nullptr, &errmsg);
     if(r != SQLITE_OK)

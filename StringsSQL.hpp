@@ -2,12 +2,12 @@
 // Created by alex on 14.09.2023.
 //
 
-#ifndef PROIECT_SISTEMBANCAR_STRINGSSQL_H
-#define PROIECT_SISTEMBANCAR_STRINGSSQL_H
+#ifndef PROJECT_BANKINGSYSTEM_STRINGSSQL_HPP
+#define PROJECT_BANKINGSYSTEM_STRINGSSQL_HPP
 
 #include <string>
-#include "Cont.h"
-#include "Tranzactii.h"
+#include "Account.hpp"
+#include "Transactions.hpp"
 
 std:: string insertStr(Client cl);
 std:: string insertStrC(Cont cnt);

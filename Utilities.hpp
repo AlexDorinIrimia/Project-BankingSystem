@@ -2,12 +2,12 @@
 // Created by alex on 01.09.2023.
 //
 
-#ifndef PROIECT_SISTEMBANCAR_UTILITIES_H
-#define PROIECT_SISTEMBANCAR_UTILITIES_H
+#ifndef PROJECT_BANKINGSYSTEM__UTILITIES_HPP
+#define PROJECT_BANKINGSYSTEM__UTILITIES_HPP
 
 # include <string>
-# include "Cont.h"
-# include "Client.h"
+# include "Account.hpp"
+# include "Client.hpp"
 
 void vizualizareDetalii(Cont cnt);
 bool LogIn(Client *client);
