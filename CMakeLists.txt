@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(myfiles  include/Utilities.hpp
 src/C++/Utilities.cpp
-main.cpp
+src/C++/main.cpp
 src/C++/Client.cpp
 include/Client.hpp
 include/Account.hpp
