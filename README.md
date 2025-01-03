@@ -1,26 +1,4 @@
-# Proiect-SistemBancar
-
-Română
-
-  Resurse adiționale
-    
-  Pentru a rula aplicatia este nevoie de descărcarea SQLite pentru a putea folosi baza de date.(Pentru descarcare: https://www.sqlite.org/download.html)
-
-
-Mod de utilizare
-
-La rularea programului, va fi afișată o listă a oțiunilor pe care le puteți alege. Pentru a alege o opțiune, se introduce, de la tastatura, numarul afișat înaintea opțiunii.
-În funcție de optiunea aleasă, există 3 cazuri:
-  1. Înregistrare client - se vor introduce datele cerute
-  2. Logare - se vor introduce datele cerute(nume si parola); dacă nu există un cont asociat clientului repectiv, se întreabă dacă se doreste un cont(opiunile de raspuns sunt trecute în paranteza și trebuie introduse esact cum apar)
-  3. Ieșire - programul își va termina execuția
-  
-Viitoare modificări ale proiectului
-  1. Interfață grafică
-  2. Mascarea parolei la introducere
-  3. Moficarea creării interogărilor bazei de date(pentru mai multă siguranță)
-
-
+# Project-BankingSystem
 
 English
 
